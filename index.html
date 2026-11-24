@@ -1,311 +1,197 @@
 
-/* ===== ตั้งค่าพื้นฐาน ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: #fff8fc;
-    color: #514354;
-    line-height: 1.7;
-}
+    <title>My Profile | ประวัติส่วนตัว</title>
 
-/* ===== Navbar ===== */
-header {
-    background: rgba(255,255,255,0.95);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 15px rgba(180,100,150,0.12);
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
+<body>
 
-.navbar h2 {
-    color: #d65b9b;
-    letter-spacing: 2px;
-}
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h2>MY PROFILE ♡</h2>
 
-.navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    flex-wrap: wrap;
-}
+            <ul>
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#about">เกี่ยวกับฉัน</a></li>
+                <li><a href="#education">การศึกษา</a></li>
+                <li><a href="#skills">ความสามารถ</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-.navbar a {
-    text-decoration: none;
-    color: #75556d;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    <!-- หน้าแรก -->
+    <section class="hero" id="home">
+        <div class="hero-content">
 
-.navbar a:hover {
-    color: #e45caa;
-}
+            <span class="welcome">WELCOME TO MY WEBSITE</span>
 
-/* ===== หน้าแรก ===== */
-.hero {
-    min-height: 570px;
-    background: linear-gradient(135deg, #f8c9df, #e5d5ff, #d5e9ff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-}
+            <h1>HELLO, EVERYONE!</h1>
 
-.hero-content {
-    background: rgba(255,255,255,0.65);
-    padding: 55px 35px;
-    border-radius: 30px;
-    max-width: 750px;
-    box-shadow: 0 10px 35px rgba(150,100,150,0.15);
-}
+            <h2>ยินดีต้อนรับเข้าสู่เว็บไซต์ของฉัน ♡</h2>
 
-.hero h1 {
-    color: #c34c91;
-    font-size: 38px;
-    margin-bottom: 15px;
-}
+            <p>
+                เว็บไซต์แนะนำประวัติส่วนตัว
+                การศึกษา งานอดิเรก และความสามารถของฉัน
+            </p>
 
-.hero h2 {
-    color: #8e69b5;
-    font-size: 27px;
-    margin-bottom: 15px;
-}
+            <a href="#about" class="btn">รู้จักฉันเพิ่มเติม →</a>
 
-.hero p {
-    margin-bottom: 30px;
-}
+        </div>
+    </section>
 
-.btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #e77eb5, #a98ae5);
-    color: white;
-    text-decoration: none;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: 0.3s;
-}
+    <!-- เกี่ยวกับฉัน -->
+    <section class="section" id="about">
 
-.btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px #d9a3cb;
-}
+        <h2 class="section-title">ABOUT ME</h2>
+        <p class="section-subtitle">เกี่ยวกับตัวฉัน</p>
 
-/* ===== ส่วนเนื้อหาทั่วไป ===== */
-.section {
-    max-width: 1150px;
-    margin: auto;
-    padding: 85px 30px;
-}
+        <div class="about-container">
 
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    color: #c65b99;
-    margin-bottom: 45px;
-}
+            <img src="images/profile.jpg"
+                 alt="รูปโปรไฟล์"
+                 class="profile-img">
 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 75px;
-    height: 4px;
-    background: #e8a0c9;
-    margin: 12px auto;
-    border-radius: 10px;
-}
+            <div class="about-text">
 
-/* ===== เกี่ยวกับฉัน ===== */
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
+                <h3>สวัสดีค่ะ! ♡</h3>
 
-.profile-img {
-    width: 280px;
-    height: 330px;
-    object-fit: cover;
-    border: 8px solid white;
-    border-radius: 30px;
-    box-shadow: 0 8px 25px rgba(180,100,150,0.2);
-}
+                <p><strong>ชื่อ:</strong> กวินธิดา ทองช้อย</p>
 
-.about-text {
-    max-width: 580px;
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(180,100,150,0.08);
-}
+                <p><strong>ชื่อเล่น:</strong> กรอกชื่อเล่น</p>
 
-.about-text h3 {
-    color: #bd5794;
-    margin-bottom: 15px;
-}
+                <p><strong>อายุ:</strong> กรอกอายุ</p>
 
-.about-text p {
-    margin-bottom: 10px;
-}
+                <p><strong>สถานศึกษา:</strong> กรอกชื่อสถานศึกษา</p>
 
-/* ===== การศึกษาและงานอดิเรก ===== */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-}
+                <p><strong>ระดับการศึกษา:</strong> ปวช.</p>
 
-.card {
-    background: white;
-    padding: 30px 25px;
-    border-radius: 22px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(180,100,150,0.09);
-    border-bottom: 5px solid #e9a3c9;
-    transition: 0.3s;
-}
+                <p><strong>แผนกวิชา:</strong> กรอกชื่อแผนก</p>
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(180,100,150,0.18);
-}
+                <p class="description">
+                    ฉันเป็นคนที่ชอบเรียนรู้สิ่งใหม่ ๆ
+                    สนใจด้านเทคโนโลยีและการออกแบบเว็บไซต์
+                    และต้องการพัฒนาความสามารถของตัวเองอยู่เสมอ
+                </p>
 
-.card h3 {
-    color: #c45b99;
-    margin-bottom: 15px;
-}
+            </div>
 
-/* ===== ความสามารถ ===== */
-.skills-container {
-    max-width: 750px;
-    margin: auto;
-}
+        </div>
+    </section>
 
-.skill {
-    margin-bottom: 25px;
-}
+    <!-- การศึกษาและงานอดิเรก -->
+    <section class="section background-pink" id="education">
 
-.skill h3 {
-    margin-bottom: 10px;
-    color: #9366b4;
-}
+        <h2 class="section-title">MY INTERESTS</h2>
+        <p class="section-subtitle">การศึกษา งานอดิเรก และความสนใจ</p>
 
-.progress {
-    width: 100%;
-    height: 15px;
-    background: #f0e3ef;
-    border-radius: 20px;
-    overflow: hidden;
-}
+        <div class="card-container">
 
-.progress-html,
-.progress-css,
-.progress-js {
-    height: 100%;
-    border-radius: 20px;
-}
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h3>การศึกษา</h3>
+                <p>กำลังศึกษาในระดับประกาศนียบัตรวิชาชีพ (ปวช.)</p>
+            </div>
 
-.progress-html {
-    width: 85%;
-    background: linear-gradient(90deg, #f3a0c9, #d76ba9);
-}
+            <div class="card">
+                <div class="card-icon">🎧</div>
+                <h3>งานอดิเรก</h3>
+                <p>ฟังเพลง ดูหนัง เล่นเกม และใช้เวลาว่างให้เกิดประโยชน์</p>
+            </div>
 
-.progress-css {
-    width: 75%;
-    background: linear-gradient(90deg, #c5a3ef, #9673d5);
-}
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>ความสนใจ</h3>
+                <p>การเขียนโปรแกรม ออกแบบเว็บไซต์ และเทคโนโลยีคอมพิวเตอร์</p>
+            </div>
 
-.progress-js {
-    width: 55%;
-    background: linear-gradient(90deg, #a8c9f5, #739ee0);
-}
+        </div>
+    </section>
 
-/* ===== ติดต่อ ===== */
-.contact-box {
-    background: white;
-    max-width: 650px;
-    margin: auto;
-    padding: 40px;
-    text-align: center;
-    border-radius: 25px;
-    box-shadow: 0 5px 25px rgba(180,100,150,0.12);
-}
+    <!-- ความสามารถ -->
+    <section class="section" id="skills">
 
-.contact-box p {
-    margin-bottom: 15px;
-}
+        <h2 class="section-title">MY SKILLS</h2>
+        <p class="section-subtitle">ความสามารถของฉัน</p>
 
-.contact-box button {
-    background: linear-gradient(135deg, #e77eb5, #a98ae5);
-    color: white;
-    border: none;
-    padding: 13px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 15px;
-    transition: 0.3s;
-}
+        <div class="skills-container">
 
-.contact-box button:hover {
-    transform: scale(1.05);
-}
+            <div class="skill">
+                <div class="skill-info">
+                    <h3>HTML</h3>
+                    <span>85%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-html"></div>
+                </div>
+            </div>
 
-/* ===== Footer ===== */
-footer {
-    background: linear-gradient(135deg, #d982b4, #9678c7);
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
-    margin-top: 40px;
-}
+            <div class="skill">
+                <div class="skill-info">
+                    <h3>CSS</h3>
+                    <span>75%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-css"></div>
+                </div>
+            </div>
 
-footer p {
-    margin: 5px;
-}
+            <div class="skill">
+                <div class="skill-info">
+                    <h3>JavaScript</h3>
+                    <span>55%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-js"></div>
+                </div>
+            </div>
 
-/* ===== รองรับมือถือ ===== */
-@media (max-width: 768px) {
-    .navbar {
-        justify-content: center;
-    }
+        </div>
+    </section>
 
-    .navbar ul {
-        justify-content: center;
-        gap: 15px;
-    }
+    <!-- ติดต่อ -->
+    <section class="section background-pink" id="contact">
 
-    .hero h1 {
-        font-size: 27px;
-    }
+        <h2 class="section-title">CONTACT ME</h2>
+        <p class="section-subtitle">ช่องทางการติดต่อ</p>
 
-    .hero h2 {
-        font-size: 22px;
-    }
+        <div class="contact-box">
 
-    .about-container {
-        gap: 25px;
-    }
+            <div class="card-icon">💌</div>
 
-    .section {
-        padding: 55px 20px;
-    }
-}
+            <h3>ขอบคุณที่เข้ามาเยี่ยมชมเว็บไซต์</h3>
+
+            <p>Facebook: กรอกชื่อ Facebook</p>
+
+            <p>Instagram: กรอกชื่อ Instagram</p>
+
+            <p>Email: กรอกอีเมล</p>
+
+            <button onclick="showMessage()">
+                กดเพื่อแสดงข้อความ ♡
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>MY PROFILE ♡</h3>
+        <p>© 2026 กวินธิดา ทองช้อย</p>
+        <p>เว็บไซต์นี้จัดทำขึ้นเพื่อการศึกษา</p>
+    </footer>
+
+    <!-- เชื่อมต่อ JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

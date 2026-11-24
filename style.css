@@ -1,5 +1,5 @@
 
-/* ===== ตั้งค่าพื้นฐาน ===== */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +14,9 @@ body {
     line-height: 1.7;
 }
 
-/* ===== Navbar ===== */
+/* ===== NAVBAR ===== */
 header {
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.96);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -57,10 +57,15 @@ header {
     color: #e45caa;
 }
 
-/* ===== หน้าแรก ===== */
+/* ===== HERO ===== */
 .hero {
-    min-height: 570px;
-    background: linear-gradient(135deg, #f8c9df, #e5d5ff, #d5e9ff);
+    min-height: 580px;
+    background: linear-gradient(
+        135deg,
+        #f8c9df,
+        #e5d5ff,
+        #d5e9ff
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,23 +74,30 @@ header {
 }
 
 .hero-content {
-    background: rgba(255,255,255,0.75);
-    padding: 55px 35px;
+    background: rgba(255,255,255,0.72);
+    padding: 60px 40px;
     border-radius: 30px;
-    max-width: 750px;
+    max-width: 800px;
     width: 100%;
     box-shadow: 0 10px 35px rgba(150,100,150,0.15);
 }
 
+.welcome {
+    color: #b76b9d;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
 .hero h1 {
     color: #c34c91;
-    font-size: 38px;
-    margin-bottom: 15px;
+    font-size: 45px;
+    margin: 15px 0;
 }
 
 .hero h2 {
     color: #8e69b5;
-    font-size: 27px;
+    font-size: 25px;
     margin-bottom: 15px;
 }
 
@@ -93,10 +105,14 @@ header {
     margin-bottom: 30px;
 }
 
-/* ===== ปุ่ม ===== */
+/* ===== BUTTON ===== */
 .btn {
     display: inline-block;
-    background: linear-gradient(135deg, #e77eb5, #a98ae5);
+    background: linear-gradient(
+        135deg,
+        #e77eb5,
+        #a98ae5
+    );
     color: white;
     text-decoration: none;
     padding: 13px 30px;
@@ -109,7 +125,7 @@ header {
     box-shadow: 0 8px 20px #d9a3cb;
 }
 
-/* ===== ส่วนเนื้อหา ===== */
+/* ===== SECTION ===== */
 .section {
     max-width: 1150px;
     margin: auto;
@@ -118,22 +134,25 @@ header {
 
 .section-title {
     text-align: center;
-    font-size: 32px;
+    font-size: 34px;
     color: #c65b99;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #977c99;
     margin-bottom: 45px;
 }
 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 75px;
-    height: 4px;
-    background: #e8a0c9;
-    margin: 12px auto;
-    border-radius: 10px;
+.background-pink {
+    max-width: 100%;
+    background: #fff0f7;
+    padding-left: max(30px, calc((100% - 1090px) / 2));
+    padding-right: max(30px, calc((100% - 1090px) / 2));
 }
 
-/* ===== เกี่ยวกับฉัน ===== */
+/* ===== ABOUT ===== */
 .about-container {
     display: flex;
     align-items: center;
@@ -153,32 +172,44 @@ header {
 
 .about-text {
     max-width: 580px;
+    flex: 1;
+    min-width: 260px;
     background: white;
-    padding: 30px;
-    border-radius: 20px;
+    padding: 35px;
+    border-radius: 25px;
     box-shadow: 0 5px 20px rgba(180,100,150,0.08);
 }
 
 .about-text h3 {
     color: #bd5794;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .about-text p {
     margin-bottom: 10px;
 }
 
-/* ===== การศึกษาและงานอดิเรก ===== */
+.description {
+    border-top: 1px solid #f3d5e6;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* ===== CARDS ===== */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
     gap: 25px;
 }
 
 .card {
     background: white;
-    padding: 30px 25px;
-    border-radius: 22px;
+    padding: 35px 25px;
+    border-radius: 25px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(180,100,150,0.09);
     border-bottom: 5px solid #e9a3c9;
@@ -190,24 +221,48 @@ header {
     box-shadow: 0 12px 25px rgba(180,100,150,0.18);
 }
 
-.card h3 {
-    color: #c45b99;
+.card-icon {
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
-/* ===== ความสามารถ ===== */
+.card h3 {
+    color: #c45b99;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+/* ===== SKILLS ===== */
 .skills-container {
     max-width: 750px;
     margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(180,100,150,0.08);
 }
 
 .skill {
     margin-bottom: 25px;
 }
 
-.skill h3 {
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
+}
+
+.skill-info h3 {
     color: #9366b4;
+}
+
+.skill-info span {
+    color: #c65b99;
+    font-weight: bold;
 }
 
 .progress {
@@ -240,7 +295,7 @@ header {
     background: linear-gradient(90deg, #a8c9f5, #739ee0);
 }
 
-/* ===== ติดต่อ ===== */
+/* ===== CONTACT ===== */
 .contact-box {
     background: white;
     max-width: 650px;
@@ -253,7 +308,7 @@ header {
 
 .contact-box h3 {
     color: #bd5794;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .contact-box p {
@@ -261,7 +316,11 @@ header {
 }
 
 .contact-box button {
-    background: linear-gradient(135deg, #e77eb5, #a98ae5);
+    background: linear-gradient(
+        135deg,
+        #e77eb5,
+        #a98ae5
+    );
     color: white;
     border: none;
     padding: 13px 30px;
@@ -274,23 +333,39 @@ header {
 
 .contact-box button:hover {
     transform: scale(1.05);
+    box-shadow: 0 5px 15px #d9a3cb;
 }
 
-/* ===== Footer ===== */
+#message {
+    color: #c34c91;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* ===== FOOTER ===== */
 footer {
-    background: linear-gradient(135deg, #d982b4, #9678c7);
+    background: linear-gradient(
+        135deg,
+        #d982b4,
+        #9678c7
+    );
     color: white;
     text-align: center;
-    padding: 30px 15px;
-    margin-top: 40px;
+    padding: 35px 15px;
+}
+
+footer h3 {
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
 footer p {
     margin: 5px;
 }
 
-/* ===== รองรับมือถือ ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+
     .navbar {
         justify-content: center;
     }
@@ -300,24 +375,45 @@ footer p {
         gap: 15px;
     }
 
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+    }
+
     .hero h1 {
-        font-size: 27px;
+        font-size: 30px;
     }
 
     .hero h2 {
-        font-size: 22px;
-    }
-
-    .about-container {
-        gap: 25px;
+        font-size: 20px;
     }
 
     .section {
         padding: 55px 20px;
     }
 
+    .background-pink {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-container {
+        gap: 25px;
+    }
+
     .profile-img {
         max-width: 100%;
+    }
+
+    .about-text {
+        min-width: 100%;
+    }
+
+    .skills-container {
+        padding: 25px;
     }
 
     .contact-box {
